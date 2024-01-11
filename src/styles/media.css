@@ -1,0 +1,440 @@
+@media screen and (max-width: 768px) {
+  .btn {
+    font-size: 1.7vw;
+    padding: 1vw 2.6vw;
+  }
+
+  .header-inner .nav ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  .menu-section .menu-section-inner div h4 {
+    font-size: 3vw;
+  }
+
+  .menu-inner {
+    width: 1000vw;
+  }
+
+  .main-inner h1 {
+    font-size: 6vw;
+  }
+  .main-inner p {
+    font-size: 2vw;
+  }
+  .header-inner .nav ul li a {
+    font-size: 2vw;
+  }
+
+  .pizza-3 {
+    bottom: 0%;
+  }
+
+  .pizza-1 {
+    bottom: 0%;
+  }
+
+  .menu-item {
+    width: 27vw;
+    height: 27vw;
+  }
+
+  .menu-item img {
+    width: 12vw;
+  }
+
+  .menu-item div p {
+    font-size: 2vw;
+  }
+
+  .btn-2 {
+    font-size: 1.2vw;
+    padding: 0.5vw 1vw;
+  }
+
+  .month-food h1 {
+    font-size: 3vw;
+  }
+
+  .month-food p {
+    font-size: 1.5vw;
+  }
+
+  .month-food article .item {
+    width: 23vw;
+    height: 30vw;
+  }
+
+  .month-food article .item div h3 {
+    font-size: 1.7vw;
+  }
+
+  .month-food article .item p {
+    font-size: 1vw;
+  }
+
+  .footer-inner {
+    padding: 20px 100px;
+  }
+
+  .footer-inner ul li {
+    font-size: 1.5vw;
+  }
+
+  .footer-inner ul {
+    gap: 2px;
+  }
+
+  .month-food article .item img {
+    width: 23vw;
+  }
+
+  .month-food article .item div span h5 {
+    font-size: 1.2vw;
+  }
+
+  .copyright p {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1.3vw;
+  }
+
+  .about-section article p {
+    line-height: 150%;
+    margin-top: 40px;
+    font-size: 1.5vw;
+    color: #75797f;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .main {
+    background: url("../assets/main-bg-mobile.png") no-repeat center;
+    padding-bottom: 15vw;
+    background-size: cover;
+  }
+  .main-inner {
+    width: 90vw;
+    padding-top: 0;
+    margin: 0 auto;
+    margin-top: 0;
+    gap: 0;
+    padding-bottom: 0;
+  }
+
+  .container {
+    max-width: 95vw;
+    height: 100%;
+    padding: 10px 15px;
+    margin: 0 auto;
+  }
+
+  .main-inner h1 {
+    font-size: 10vw;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+
+  .header-inner .nav {
+    display: none;
+  }
+
+  .pizza-1 {
+    width: 25vw;
+    bottom: -1%;
+  }
+
+  .pizza-2 {
+    width: 25vw;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+  }
+
+  .pizza-3 {
+    width: 17vw;
+    bottom: 0%;
+  }
+
+  .main-inner p {
+    font-size: 3vw;
+    margin-bottom: 50px;
+  }
+
+  .main-inner {
+    padding-bottom: 90px;
+  }
+
+  .btn {
+    font-size: 3vw;
+    padding: 2vw 4.4vw;
+  }
+  .main-scrolled {
+    padding-top: 30px;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    content: " ";
+    width: 20px;
+    height: 2px;
+    background-color: white;
+  }
+
+  .logo h3 {
+    font-size: 4vw;
+  }
+
+  .menu {
+    margin-left: 0;
+    margin: 20px 0;
+  }
+
+  .menu-item {
+    width: 37vw;
+    height: 37vw;
+    border-radius: 20px;
+  }
+
+  .menu-section .menu-section-inner div {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 100px;
+  }
+
+  .about-section article p {
+    line-height: 150%;
+    margin-top: 10px;
+    font-size: 1.2vw;
+    color: #75797f;
+  }
+
+  .about-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 0;
+    padding-right: 50px;
+    background-color: white;
+  }
+
+  .month-food {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 50px 25px;
+  }
+
+  .month-food h1 {
+    text-align: center;
+    font-size: 7vw;
+  }
+
+  .mf-content {
+    width: 80vw;
+  }
+
+  .month-food p {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 3vw;
+  }
+
+  .month-food article .item {
+    width: 47vw;
+    height: 57vw;
+  }
+
+  .month-food article .item img {
+    width: 47vw;
+  }
+
+  .month-food article {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+
+  .month-food article .item div h3 {
+    margin-top: 10px;
+    font-size: 3.5vw;
+  }
+
+  .month-food article .item p {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.5vw;
+    color: #75797f;
+  }
+
+  .month-food article .item div span h5 {
+    font-size: 3vw;
+  }
+
+  .map-section h1 {
+    font-size: 6vw;
+    margin-bottom: 20px;
+  }
+
+  .month-food article .item div {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .month-food article .item div span {
+    margin-top: 10px;
+  }
+
+  iframe {
+    height: 200px;
+  }
+
+  .menu-inner {
+    width: 1000vw;
+  }
+
+  .menu-section .menu-section-inner div h4 {
+    font-size: 6vw;
+  }
+
+  .menu-section .menu-section-inner div p {
+    font-size: 2vw;
+  }
+
+  .menu-item h3 {
+    font-size: 4vw;
+  }
+
+  .btn-2 {
+    font-size: 2vw;
+    padding: 1vw 2vw;
+  }
+
+  .menu-item div p {
+    font-size: 3vw;
+  }
+
+  .menu-item img {
+    width: 17vw;
+  }
+
+  .aboutPizza {
+    content: url("../assets/aboutPizza-mobile.png");
+    width: 60vw;
+  }
+
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .about-section article {
+    width: 90vw;
+  }
+
+  .about-section article h1 {
+    font-size: 6vw;
+  }
+
+  .about-section article p {
+    margin-top: 30px;
+    font-size: 3vw;
+  }
+
+  .footer-inner {
+    padding: 20px 20px;
+  }
+
+  .footer-inner ul {
+    gap: 2px;
+    margin-top: 10px;
+  }
+
+  .footer-inner ul li {
+    font-size: 1.8vw;
+  }
+
+  footer h1 {
+    font-size: 3vw;
+  }
+
+  .copyright p {
+    margin: 10px 0;
+    text-align: center;
+    font-size: 1.7vw;
+  }
+
+  .hamburger-nav {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 70vw;
+    background-color: #762601;
+    transform: translateX(-100%);
+    border-bottom: 1px solid white;
+    transition: 0.5s;
+  }
+
+  .active {
+    transform: translateX(0);
+  }
+
+  .hamburger-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    gap: 444vw;
+    margin-top: 10vw;
+  }
+
+  .hamburger-nav ul li {
+    list-style: none;
+  }
+
+  .hamburger-nav ul li a {
+    font-size: 4vw;
+  }
+
+  .hamburger-nav .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .hamburger-nav .close div {
+    width: 15px;
+    height: 1.5px;
+    background-color: white;
+  }
+
+  .hamburger-nav .close .one {
+    transform: translateY(1px);
+    rotate: 45deg;
+  }
+
+  .hamburger-nav .close .two {
+    transform: translateY(-1px);
+    transform: translateX(px);
+    rotate: -45deg;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .hamburger-nav {
+    display: none;
+  }
+}
