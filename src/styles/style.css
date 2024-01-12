@@ -493,8 +493,12 @@ a {
   rotate: -45deg;
 }
 
+.order-menu {
+  overflow-y: auto;
+}
+
 .order-menu-content {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .order-menu-content div {
@@ -504,4 +508,22 @@ a {
 
 .order-menu-content img {
   width: 100px;
+}
+
+.order-menu-header-scrolled {
+  width: 100%;
+  height: 50px;
+  background-color: #762601;
+  position: fixed;
+  top: 0;
+}
+
+.order-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.total-coast {
+  text-align: center;
 }

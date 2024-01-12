@@ -13,7 +13,7 @@
     font-size: 3vw;
   }
 
-  .menu-inner {
+  ham-active .menu-inner {
     width: 1000vw;
   }
 
@@ -166,7 +166,7 @@
     padding-bottom: 90px;
   }
 
-  .btn {
+  .hamburger-nav .btn {
     font-size: 3vw;
     padding: 2vw 4.4vw;
   }
@@ -251,7 +251,7 @@
 
   .month-food article .item {
     width: 47vw;
-    height: 57vw;
+    height: 58vw;
   }
 
   .month-food article .item img {
@@ -277,7 +277,7 @@
   }
 
   .month-food article .item div span h5 {
-    font-size: 3vw;
+    font-size: 2vw;
   }
 
   .map-section h1 {
@@ -288,10 +288,6 @@
   .month-food article .item div {
     margin: 0 auto;
     text-align: center;
-  }
-
-  .month-food article .item div span {
-    margin-top: 10px;
   }
 
   iframe {
@@ -315,7 +311,7 @@
   }
 
   .btn-2 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     padding: 1vw 2vw;
   }
 
@@ -382,12 +378,12 @@
     width: 100%;
     height: 70vw;
     background-color: #762601;
-    transform: translateX(-100%);
+    transform: translateX(100%);
     border-bottom: 1px solid white;
     transition: 0.5s;
   }
 
-  .active {
+  .ham-active {
     transform: translateX(0);
   }
 
@@ -397,7 +393,7 @@
     justify-content: center;
     width: 100%;
     text-align: center;
-    gap: 444vw;
+    gap: 4vw;
     margin-top: 10vw;
   }
 

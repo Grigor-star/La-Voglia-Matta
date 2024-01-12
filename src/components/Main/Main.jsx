@@ -7,6 +7,16 @@ const Main = () => {
   const [windowPathname, setWindowpathname] = useState("#Home");
   const [isActive, setIsActive] = useState(false);
   const [menuItems, setMenuItems] = useState([]);
+  const [hamburgerActive, setHamburgerActive] = useState(false);
+  const [closeIsActive, setCloseIsActive] = useState(false);
+
+  const handleHamClick = () => {
+    setHamburgerActive(true);
+  };
+
+  const handleHamClose = () => {
+    setHamburgerActive(false);
+  };
 
   let pizzaArr = [
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 1 },
@@ -16,10 +26,10 @@ const Main = () => {
     { title: "Diavola-3", price: 7.59, count: 1, img: pizzaTwo, id: 5 },
     { title: "Diavola-4", price: 7.59, count: 1, img: pizzaTwo, id: 6 },
     { title: "Diavola-5", price: 7.59, count: 1, img: pizzaTwo, id: 7 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 8 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 9 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 11 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 11 },
+    { title: "Diavola-6", price: 7.59, count: 1, img: pizzaTwo, id: 8 },
+    { title: "Diavola-7", price: 7.59, count: 1, img: pizzaTwo, id: 9 },
+    { title: "Diavola-8", price: 7.59, count: 1, img: pizzaTwo, id: 11 },
+    { title: "Diavola-9", price: 7.59, count: 1, img: pizzaTwo, id: 11 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 12 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 13 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 14 },
@@ -39,10 +49,14 @@ const Main = () => {
   ];
 
   const handleOrderMenuOpen = () => {
-    setIsActive((prevIsActive) => !prevIsActive);
+    setIsActive(true);
+    setTimeout(() => {
+      setCloseIsActive(true);
+    }, 500);
   };
 
   const handleOrderMenuClose = () => {
+    setCloseIsActive(false);
     setIsActive(false);
   };
 
@@ -80,8 +94,10 @@ const Main = () => {
       <main
         id="Home"
         className={`main${isScrolled ? " main-scrolled" : ""}`}>
-        <nav className="hamburger-nav">
-          <div className="close">
+        <nav className={`hamburger-nav ${hamburgerActive ? "ham-active" : ""}`}>
+          <div
+            className="close"
+            onClick={handleHamClose}>
             <div className="one"></div>
             <div className="two"></div>
           </div>
@@ -135,25 +151,35 @@ const Main = () => {
           {" "}
           <div className="order-menu-inner">
             <div
-              className="close"
-              onClick={handleOrderMenuClose}>
-              <div className="one"></div>
-              <div className="two"></div>
+              className={`order-menu-header ${
+                closeIsActive ? "order-menu-header-scrolled" : ""
+              }`}>
+              <div
+                className="close"
+                onClick={handleOrderMenuClose}>
+                <div className="one"></div>
+                <div className="two"></div>
+              </div>
             </div>
             <div className="order-menu-content">
               {menuItems.length > 0 &&
                 menuItems.map((item, index) => (
-                  <div key={`menu-item-${index}`}>
+                  <div
+                    key={`order-menu-item-${index}`}
+                    className="order-menu-item">
                     <img
                       src={item.img}
                       alt=""
                     />
-                    {item.title}
-                    {parseFloat(
-                      item.price
-                        .toString()
-                        .substring(0, item.price.toString().indexOf(".") + 3)
-                    )}
+                    <h4>{item.title}</h4>
+                    <p>
+                      {parseFloat(
+                        item.price
+                          .toString()
+                          .substring(0, item.price.toString().indexOf(".") + 3)
+                      )}
+                      €
+                    </p>
                     <button
                       onClick={() =>
                         setMenuItems((prevItems) => {
@@ -205,7 +231,9 @@ const Main = () => {
                     </button>
                   </div>
                 ))}
-              <h2>Total Cost: {calculateTotalCost()} €</h2>
+              <h2 className="total-coast">
+                Somma Totale: {calculateTotalCost()} €
+              </h2>
             </div>
           </div>
         </section>
@@ -270,7 +298,9 @@ const Main = () => {
                 </li>
               </ul>
             </nav>
-            <ul className="hamburger">
+            <ul
+              className="hamburger"
+              onClick={handleHamClick}>
               <div></div>
               <div></div>
               <div></div>
