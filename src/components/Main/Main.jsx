@@ -10,6 +10,14 @@ const Main = () => {
   const [hamburgerActive, setHamburgerActive] = useState(false);
   const [closeIsActive, setCloseIsActive] = useState(false);
 
+  useEffect(() => {
+    if (isActive === true) {
+      setCloseIsActive(true);
+    } else {
+      setCloseIsActive(false);
+    }
+  }, [isActive]);
+
   const handleHamClick = () => {
     setHamburgerActive(true);
   };
@@ -29,8 +37,7 @@ const Main = () => {
     { title: "Diavola-6", price: 7.59, count: 1, img: pizzaTwo, id: 8 },
     { title: "Diavola-7", price: 7.59, count: 1, img: pizzaTwo, id: 9 },
     { title: "Diavola-8", price: 7.59, count: 1, img: pizzaTwo, id: 11 },
-    { title: "Diavola-9", price: 7.59, count: 1, img: pizzaTwo, id: 11 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 12 },
+    { title: "Diavola-9", price: 7.59, count: 1, img: pizzaTwo, id: 12 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 13 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 14 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 15 },
@@ -38,14 +45,15 @@ const Main = () => {
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 17 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 18 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 19 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 21 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 21 },
+    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 20 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 22 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 23 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 24 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 25 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 26 },
     { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 27 },
+    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 28 },
+    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 29 },
   ];
 
   const handleOrderMenuOpen = () => {
@@ -149,6 +157,9 @@ const Main = () => {
         <section
           className={`order-menu ${isActive ? "active-order-menu" : ""}`}>
           {" "}
+          <h2 className="total-coast">
+            Somma Totale: {calculateTotalCost()} €
+          </h2>
           <div className="order-menu-inner">
             <div
               className={`order-menu-header ${
@@ -161,6 +172,7 @@ const Main = () => {
                 <div className="two"></div>
               </div>
             </div>
+
             <div className="order-menu-content">
               {menuItems.length > 0 &&
                 menuItems.map((item, index) => (
@@ -231,9 +243,6 @@ const Main = () => {
                     </button>
                   </div>
                 ))}
-              <h2 className="total-coast">
-                Somma Totale: {calculateTotalCost()} €
-              </h2>
             </div>
           </div>
         </section>

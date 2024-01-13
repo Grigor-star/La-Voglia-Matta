@@ -493,7 +493,8 @@ a {
   rotate: -45deg;
 }
 
-.order-menu {
+.order-menu-inner {
+  height: 85%;
   overflow-y: auto;
 }
 
@@ -525,5 +526,7 @@ a {
 }
 
 .total-coast {
+  margin-top: 50px;
   text-align: center;
+  padding-bottom: 20px;
 }
