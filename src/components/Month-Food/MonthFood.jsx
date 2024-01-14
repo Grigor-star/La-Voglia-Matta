@@ -5,7 +5,7 @@ const MonthFood = () => {
   return (
     <section
       id="month-food"
-      className="month-food">
+      className="month-food global-menu">
       <div className="mf-content">
         <h1>Il Cibo Del Mese</h1>
       </div>

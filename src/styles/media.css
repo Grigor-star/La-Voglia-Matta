@@ -86,11 +86,11 @@
     gap: 2px;
   }
 
-  .month-food article .item img {
+  .global-menu article .item img {
     width: 23vw;
   }
 
-  .month-food article .item div span h5 {
+  .global-menu article .item div span h5 {
     font-size: 1.2vw;
   }
 
@@ -243,18 +243,18 @@
     width: 80vw;
   }
 
-  .month-food p {
+  .global-menu p {
     margin-top: 15px;
     text-align: center;
     font-size: 3vw;
   }
 
-  .month-food article .item {
+  .global-menu article .item {
     width: 47vw;
     height: 58vw;
   }
 
-  .month-food article .item img {
+  .global-menu article .item img {
     width: 47vw;
   }
 
@@ -264,19 +264,19 @@
     flex-direction: column;
   }
 
-  .month-food article .item div h3 {
+  .global-menu article .item div h3 {
     margin-top: 10px;
     font-size: 3.5vw;
   }
 
-  .month-food article .item p {
+  .global-menu article .item p {
     margin-top: 0;
     text-align: center;
     font-size: 1.5vw;
     color: #75797f;
   }
 
-  .month-food article .item div span h5 {
+  .global-menu article .item div span h5 {
     font-size: 2vw;
   }
 
@@ -285,7 +285,7 @@
     margin-bottom: 20px;
   }
 
-  .month-food article .item div {
+  .global-menu article .item div {
     margin: 0 auto;
     text-align: center;
   }
@@ -295,6 +295,7 @@
   }
 
   .menu-inner {
+    padding-left: 20px;
     width: 1200vw;
   }
 

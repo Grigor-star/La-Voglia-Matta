@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { pizzaOne, pizzaTwo, pizzaThree, shoppingBag } from "../../assets";
 import { egg, tomatoes } from "../../assets";
+import { fmOne } from "../../assets";
 
 const Main = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -8,15 +9,6 @@ const Main = () => {
   const [isActive, setIsActive] = useState(false);
   const [menuItems, setMenuItems] = useState([]);
   const [hamburgerActive, setHamburgerActive] = useState(false);
-  const [closeIsActive, setCloseIsActive] = useState(false);
-
-  useEffect(() => {
-    if (isActive === true) {
-      setCloseIsActive(true);
-    } else {
-      setCloseIsActive(false);
-    }
-  }, [isActive]);
 
   const handleHamClick = () => {
     setHamburgerActive(true);
@@ -58,13 +50,9 @@ const Main = () => {
 
   const handleOrderMenuOpen = () => {
     setIsActive(true);
-    setTimeout(() => {
-      setCloseIsActive(true);
-    }, 500);
   };
 
   const handleOrderMenuClose = () => {
-    setCloseIsActive(false);
     setIsActive(false);
   };
 
@@ -157,22 +145,16 @@ const Main = () => {
         <section
           className={`order-menu ${isActive ? "active-order-menu" : ""}`}>
           {" "}
+          <div
+            className="close"
+            onClick={handleOrderMenuClose}>
+            <div className="one"></div>
+            <div className="two"></div>
+          </div>
           <h2 className="total-coast">
             Somma Totale: {calculateTotalCost()} €
           </h2>
           <div className="order-menu-inner">
-            <div
-              className={`order-menu-header ${
-                closeIsActive ? "order-menu-header-scrolled" : ""
-              }`}>
-              <div
-                className="close"
-                onClick={handleOrderMenuClose}>
-                <div className="one"></div>
-                <div className="two"></div>
-              </div>
-            </div>
-
             <div className="order-menu-content">
               {menuItems.length > 0 &&
                 menuItems.map((item, index) => (
@@ -367,34 +349,42 @@ const Main = () => {
           />
         </div>
         <article className="menu">
-          <div className="menu-inner">
-            {pizzaArr.map((item, index) => (
-              <div
-                key={`item-${index}`}
-                className="menu-item">
-                <img
-                  src={item.img}
-                  alt="diavola"
-                />
-                <h3>{item.title}</h3>
-                <div>
-                  <p>{item.price}€</p>
-                  <button
-                    className="btn-2"
-                    onClick={() => {
-                      const existingItem = menuItems.find(
-                        (Item) => Item.title === item.title
-                      );
-                      if (!existingItem) {
-                        setMenuItems([...menuItems, { ...item }]);
-                        setIsActive(true);
-                      }
-                    }}>
-                    Aggiungi
-                  </button>
+          <div className="menu-inner global-menu">
+            <article className="menu-inner">
+              {pizzaArr.map((item, index) => (
+                <div
+                  className="item"
+                  key={index}>
+                  <img
+                    src={fmOne}
+                    alt=""
+                  />
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>
+                      But I must explain to you how all this mistaken idea of
+                      will give you a complete account of the system
+                    </p>
+                    <span>
+                      <h5>$6.30</h5>
+                      <button
+                        className="btn-2"
+                        onClick={() => {
+                          const existingItem = menuItems.find(
+                            (Item) => Item.title === item.title
+                          );
+                          if (!existingItem) {
+                            setMenuItems([...menuItems, { ...item }]);
+                            setIsActive(true);
+                          }
+                        }}>
+                        Aggiungi
+                      </button>
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </article>
           </div>
         </article>
       </section>

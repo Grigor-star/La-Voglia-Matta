@@ -39,6 +39,7 @@ body {
   z-index: 99;
   position: fixed;
   border-bottom: 1px solid #fff;
+  box-shadow: 5px 5px 50px #1e1e1e;
 }
 
 .main-scrolled {
@@ -299,12 +300,12 @@ body {
   font-size: 1.3vw;
 }
 
-.month-food article {
+.global-menu article {
   display: flex;
   gap: 40px;
 }
 
-.month-food article .item {
+.global-menu article .item {
   width: 20vw;
   height: 24vw;
   background-color: white;
@@ -312,12 +313,12 @@ body {
   border-radius: 10px;
 }
 
-.month-food article .item img {
+.global-menu article .item img {
   width: 20vw;
   border-radius: 10px 10px 0 0;
 }
 
-.month-food article .item div {
+.global-menu article .item div {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -327,23 +328,23 @@ body {
   margin-top: 0.7vw;
 }
 
-.month-food article .item div h3 {
+.global-menu article .item div h3 {
   font-size: 1.2vw;
 }
 
-.month-food article .item div span {
+.global-menu article .item div span {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.month-food article .item div span h5 {
+.global-menu article .item div span h5 {
   font-size: 1vw;
   color: black;
   text-align: center;
 }
 
-.month-food article .item p {
+.global-menu article .item p {
   margin-top: 0;
   text-align: left;
   font-size: 0.8vw;
