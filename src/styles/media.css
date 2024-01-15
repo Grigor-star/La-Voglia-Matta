@@ -13,7 +13,7 @@
     font-size: 3vw;
   }
 
-  ham-active .menu-inner {
+  .menu-inner {
     width: 1000vw;
   }
 
@@ -61,16 +61,16 @@
     font-size: 1.5vw;
   }
 
-  .month-food article .item {
+  .global-menu article .item {
     width: 23vw;
     height: 30vw;
   }
 
-  .month-food article .item div h3 {
+  .global-menu article .item div h3 {
     font-size: 1.7vw;
   }
 
-  .month-food article .item p {
+  .global-menu article .item p {
     font-size: 1vw;
   }
 
@@ -455,6 +455,18 @@
 
   .order-menu-content {
     margin-top: 0;
+  }
+
+  .location-inner {
+    flex-direction: column;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  .map-section div {
+    padding: 50px 0px;
   }
 }
 

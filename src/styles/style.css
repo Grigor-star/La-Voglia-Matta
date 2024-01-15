@@ -265,7 +265,7 @@ body {
   background-color: white;
 }
 
-.map-section div {
+.location-inner {
   padding: 50px 20px;
   width: 80vw;
   text-align: center;
@@ -307,7 +307,7 @@ body {
 
 .global-menu article .item {
   width: 20vw;
-  height: 24vw;
+  height: 22vw;
   background-color: white;
   filter: drop-shadow(0px 20px 30px rgba(0, 0, 0, 0.05));
   border-radius: 10px;
@@ -530,4 +530,63 @@ a {
   margin-top: 50px;
   text-align: center;
   padding-bottom: 20px;
+}
+
+.location-inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.email-form {
+  display: flex;
+  justify-content: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.email-form input {
+  width: 30vw;
+  height: 2.5vw;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 22px 7px rgba(92, 92, 92, 0.27);
+  padding: 0 15px;
+}
+
+.email-form input:focus {
+  outline: none;
+}
+
+.email-form textarea:focus {
+  outline: none;
+}
+
+iframe:focus {
+  outline: none;
+}
+
+.email-form textarea {
+  width: 30vw;
+  height: 20vw;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 22px 7px rgba(92, 92, 92, 0.27);
+  padding: 15px;
+  resize: none;
+}
+
+.email-form button {
+  width: 32vw;
+  height: 2.5vw;
+  border: 0;
+  background-color: #df6751;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 22px 7px rgba(92, 92, 92, 0.27);
+}
+
+iframe {
+  box-shadow: 0px 0px 22px 7px rgba(92, 92, 92, 0.27);
+  border: 0;
 }

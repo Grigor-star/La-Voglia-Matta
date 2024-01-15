@@ -46,7 +46,7 @@ const MonthFood = () => {
         </div>
         <div className="item">
           <img
-            src={fmThree}
+            src={fmOne}
             alt=""
           />
           <div>

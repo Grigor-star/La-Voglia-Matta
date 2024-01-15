@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { pizzaOne, pizzaTwo, pizzaThree, shoppingBag } from "../../assets";
 import { egg, tomatoes } from "../../assets";
-import { fmOne } from "../../assets";
+import { fmOne, fmTwo } from "../../assets";
 
 const Main = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,33 +19,33 @@ const Main = () => {
   };
 
   let pizzaArr = [
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 1 },
-    { title: "Margherita", price: 7.59, count: 1, img: pizzaThree, id: 2 },
-    { title: "Diavola-1", price: 7.59, count: 1, img: pizzaTwo, id: 3 },
-    { title: "Diavola-2", price: 7.59, count: 1, img: pizzaTwo, id: 4 },
-    { title: "Diavola-3", price: 7.59, count: 1, img: pizzaTwo, id: 5 },
-    { title: "Diavola-4", price: 7.59, count: 1, img: pizzaTwo, id: 6 },
-    { title: "Diavola-5", price: 7.59, count: 1, img: pizzaTwo, id: 7 },
-    { title: "Diavola-6", price: 7.59, count: 1, img: pizzaTwo, id: 8 },
-    { title: "Diavola-7", price: 7.59, count: 1, img: pizzaTwo, id: 9 },
-    { title: "Diavola-8", price: 7.59, count: 1, img: pizzaTwo, id: 11 },
-    { title: "Diavola-9", price: 7.59, count: 1, img: pizzaTwo, id: 12 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 13 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 14 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 15 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 16 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 17 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 18 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 19 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 20 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 22 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 23 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 24 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 25 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 26 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 27 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 28 },
-    { title: "Diavola", price: 7.59, count: 1, img: pizzaTwo, id: 29 },
+    { title: "Diavola", price: 6.03, count: 1, img: fmOne, id: 1 },
+    { title: "Margherita", price: 6.30, count: 1, img: fmTwo, id: 2 },
+    { title: "Diavola-1", price: 6.30, count: 1, img: fmOne, id: 3 },
+    { title: "Diavola-2", price: 6.30, count: 1, img: fmOne, id: 4 },
+    { title: "Diavola-3", price: 6.30, count: 1, img: fmOne, id: 5 },
+    { title: "Diavola-4", price: 6.30, count: 1, img: fmOne, id: 6 },
+    { title: "Diavola-5", price: 6.30, count: 1, img: fmOne, id: 7 },
+    { title: "Diavola-6", price: 6.30, count: 1, img: fmOne, id: 8 },
+    { title: "Diavola-7", price: 6.30, count: 1, img: fmOne, id: 9 },
+    { title: "Diavola-8", price: 6.30, count: 1, img: fmOne, id: 11 },
+    { title: "Diavola-9", price: 6.30, count: 1, img: fmOne, id: 12 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 13 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 14 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 15 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 16 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 17 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 18 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 19 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 20 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 22 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 23 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 24 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 25 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 26 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 27 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 28 },
+    { title: "Diavola", price: 6.30, count: 1, img: fmOne, id: 29 },
   ];
 
   const handleOrderMenuOpen = () => {
@@ -356,7 +356,7 @@ const Main = () => {
                   className="item"
                   key={index}>
                   <img
-                    src={fmOne}
+                    src={item.img}
                     alt=""
                   />
                   <div>
