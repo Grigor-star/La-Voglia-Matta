@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Location = () => {
   const [dataForm, setDataForm] = useState();
-  const [name, setName] = useState(" ");
-  const [lastname, setLastname] = useState(" ");
-  const [feedback, setFeedback] = useState(" ");
-
+  const [name, setName] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [feedback, setFeedback] = useState("");
+  useEffect(() => {
+    setDataForm({ name: name, lastname: lastname, feedback: feedback });
+  }, [name, lastname, feedback]);
   const handleSubmit = async () => {
     try {
-      if (!name.trim("") && !lastname.trim("") && !feedback.trim("")) {
-        setDataForm({ name: name, lastname: lastname, feedback: feedback });
+      if (dataForm) {
+        console.log(dataForm);
         const response = await fetch(
           "https://lavogliamattaserver.onrender.com/mail",
           {
@@ -21,13 +23,14 @@ const Location = () => {
             body: JSON.stringify(dataForm),
           }
         );
-
+        alert("Clicked");
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
         alert("Feedback was sent successfully");
       } else {
+        alert("You are a bitch");
       }
     } catch (err) {
       console.error(err);
