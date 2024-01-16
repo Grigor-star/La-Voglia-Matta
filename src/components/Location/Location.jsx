@@ -30,7 +30,7 @@ const Location = () => {
 
         alert("Feedback was sent successfully");
       } else {
-        alert("You are a bitch");
+        alert("Error");
       }
     } catch (err) {
       console.error(err);
