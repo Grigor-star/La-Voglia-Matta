@@ -1,5 +1,5 @@
 import React from "react";
-import { fmOne, fmTwo, fmThree } from "../../assets";
+import { fmOne, fmTwo } from "../../assets";
 
 const MonthFood = () => {
   return (
