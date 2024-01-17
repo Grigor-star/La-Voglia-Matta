@@ -11,24 +11,33 @@ const Location = () => {
   const handleSubmit = async () => {
     try {
       if (dataForm) {
-        console.log(dataForm);
-        const response = await fetch(
-          "https://lavogliamattaserver.onrender.com/mail",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              // You might need additional headers like authentication tokens
-            },
-            body: JSON.stringify(dataForm),
-          }
-        );
         alert("Clicked");
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
+        if (
+          dataForm.name.trim() === "" ||
+          dataForm.lastname.trim() === "" ||
+          dataForm.feedback.trim() === ""
+        ) {
+          alert("All the fields are required");
+        } else {
+          console.log(dataForm);
+          const response = await fetch(
+            "https://lavogliamattaserver.onrender.com/mail",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                // You might need additional headers like authentication tokens
+              },
+              body: JSON.stringify(dataForm),
+            }
+          );
+          alert("Clicked");
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
 
-        alert("Feedback was sent successfully");
+          alert("Feedback was sent successfully");
+        }
       } else {
         alert("Error");
       }
